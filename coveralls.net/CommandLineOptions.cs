@@ -11,7 +11,6 @@ namespace Coveralls.Net
     {
         private bool _sendFullSources;
         private IFileSystem _fileSystem;
-        private List<string> _inputFiles;
 
         public CommandLineOptions() : this (new LocalFileSystem())
         {}
@@ -91,7 +90,7 @@ namespace Coveralls.Net
             }
         }
 
-        [Option('s', "full-sources", DefaultValue = false, HelpText="Send full sources instead of the digest" )]
+        [Option('s', "full-sources", HelpText="Send full sources instead of the digest" )]
         public bool SendFullSources
         {
             get { return _sendFullSources; }

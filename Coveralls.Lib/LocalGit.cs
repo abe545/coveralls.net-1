@@ -37,7 +37,7 @@ namespace Coveralls
 
         public override IEnumerable<string> Branches
         {
-            get { return _repository.Branches.Select(x => x.Name); }
+            get { return _repository.Branches.Select(x => x.FriendlyName); }
         }
 
         public override IEnumerable<CommitData> Commits
@@ -55,7 +55,7 @@ namespace Coveralls
             }
         }
 
-        public override string CurrentBranch { get { return _repository.Head.Name; } }
+        public override string CurrentBranch { get { return _repository.Head.FriendlyName; } }
         public override CommitData Head
         {
             get { return Commits.First(); } 

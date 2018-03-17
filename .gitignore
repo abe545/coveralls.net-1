@@ -17,6 +17,8 @@ UpgradeLog.*
 packages
 package
 
+.vs
+
 !package/coveralls.net.nuspec
 
 # Coverage results
